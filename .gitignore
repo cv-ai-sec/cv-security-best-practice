@@ -1,0 +1,14 @@
+# Secrets and local-only data. Nothing here should ever be committed.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+Logs/
+*-restricted/
+
+# OS and tooling noise
+__pycache__/
+.DS_Store
+Thumbs.db
