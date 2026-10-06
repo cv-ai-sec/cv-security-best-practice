@@ -1,0 +1,16 @@
+# AVOID
+# - privileged: full access to the host (D05)
+# - Docker socket mounted: the container can control the host's Docker (D05)
+# - Secret written in the file (D06)
+# - No memory or process limits (D07)
+# - Port open on every interface (D03)
+services:
+  web:
+    image: example/web:latest
+    privileged: true
+    volumes:
+      - /var/run/docker.sock:/var/run/docker.sock
+    environment:
+      PAYMENTS_API_KEY: <example-real-looking-key-do-not-use>
+    ports:
+      - "3000:3000"

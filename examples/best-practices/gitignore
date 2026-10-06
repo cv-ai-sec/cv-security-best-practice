@@ -1,0 +1,14 @@
+# BEST PRACTICE: secrets, local data, and build output are ignored before the first commit.
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+*.log
+logs/
+node_modules/
+dist/
+.venv/
+__pycache__/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,2 @@
+# AVOID: only dependencies are ignored. A broad "git add ." would stage .env, keys, and logs.
+node_modules/
